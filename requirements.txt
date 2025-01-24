@@ -1,0 +1,17 @@
+streamlit
+streamlit-option-menu
+streamlit_authenticator
+
+pandas
+geopandas
+numpy
+fiona
+shapely
+pyyaml
+seaborn
+
+plotly_express
+
+reportlab
+
+openpyxl

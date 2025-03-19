@@ -3,8 +3,7 @@ from streamlit_option_menu import option_menu
 import fiona
 import Sobre, SoundPLAN, soundscape
 
-st.set_page_config(page_title="Multipage app")
-
+st.set_page_config(page_title="Multipage app", layout='wide')
 
 # URL da logo
 LOGO_URL_LARGE = "https://raw.githubusercontent.com/VictorMagno-Acoustics/mynoisebox/refs/heads/main/logo_mynoisebox.png"

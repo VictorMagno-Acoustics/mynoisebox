@@ -4,6 +4,8 @@ import fiona
 import pandas as pd
 from shapely.geometry import Point
 import numpy as np
+import xlsxwriter
+from io import BytesIO
 
 fiona.drvsupport.supported_drivers['libkml'] = 'rw' # enable KML support which is disabled by default
 fiona.drvsupport.supported_drivers['LIBKML'] = 'rw' # enable KML support which is disabled by default
@@ -79,21 +81,30 @@ def app():
 
             ############################### Exportando para csv ###############################
 
-            @st.cache_data
-            def convert_df(df):
-                return df.to_csv(header=True, index=False, sep=',').encode("utf-8")
+            # Criar um buffer de memória para salvar o arquivo Excel
+            output = BytesIO()
+            with pd.ExcelWriter(output, engine='xlsxwriter') as writer:
+                SoundPLAN_ASCII.to_excel(writer, index=False,
+                            sheet_name="Dados Processados")
+                writer.close()
 
-            # Exporta
-            csv = convert_df(SoundPLAN_ASCII)
+            # Preparar o arquivo para download
+            output.seek(0)
 
+            # Permitir exportar os dados processados para Excel
             st.download_button(
-                label="Download",
-                data=csv,
-                file_name="MyNoiseBox_SoundPLAN_ASCII.csv",
-                mime="text/csv",
+                label="Download Excel",
+                data=output,
+                file_name="MyNoiseBox_SoundPLAN_Receiver_Table.xlsx",
+                mime="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"
             )
 
             st.success('Success!', icon="✅")
+
+
+
+
+
 
 
     

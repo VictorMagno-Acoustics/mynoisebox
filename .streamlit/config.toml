@@ -4,4 +4,3 @@ primaryColor = "#1E3A8A"  # Cor primária
 backgroundColor = "#FFFFFF"  # Cor de fundo
 secondaryBackgroundColor = "#F0F2F6"  # Cor de fundo secundária
 textColor = "#000000"  # Cor do texto
-font = "sans serif"  # Fonte (opções: "sans serif", "serif", "monospace")

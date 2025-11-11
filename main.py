@@ -69,7 +69,7 @@ class MultiApp:
 
         if app == 'About':
             Sobre.app()
-        elif app =='SoundPLAN':
+        elif app =='Noise Mapping':
             SoundPLAN.app()
         elif app == 'Soundscape':
             soundscape.app()

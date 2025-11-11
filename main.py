@@ -36,7 +36,7 @@ class MultiApp:
         with st.sidebar:
             app = option_menu(
                 menu_title=False,
-                options=['About', 'SoundPLAN','Soundscape'],
+                options=['About', 'Noise Mapping','Soundscape'],
                 icons=['info-circle', 'soundwave','ear'],
                 menu_icon='chat_text_fill',
                 default_index=1,

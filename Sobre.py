@@ -9,7 +9,7 @@ def app():
 
     st.subheader('Available tools')
 
-    st.write("**SoundPLAN Page:**")
+    st.write("**Noise Mapping Page:**")
     st.write("- Import measurement points from Google Maps (.kml) to SoundPLAN.")
 
 

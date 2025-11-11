@@ -12,10 +12,10 @@ fiona.drvsupport.supported_drivers['LIBKML'] = 'rw' # enable KML support which i
 
 def app():
 
-    st.title('Toolbox for SoundPLAN')
+    st.title('Toolbox for Noise Mapping')
 
     st.write("**Available tools:**")
-    st.write("- Import measurement points from Google Maps (.kml) to SoundPLAN.")
+    st.write("- Import measurement points from Google Maps (.kml) to noise mapping.")
 
     st.markdown('---')
 
